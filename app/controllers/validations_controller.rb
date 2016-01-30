@@ -13,7 +13,8 @@ class ValidationsController < ApplicationController
   # GET /validations/1
   # GET /validations/1.json
   def show
-    @validation = Validation.find(params[:tag_id])
+    debugger
+    @validation = Validation.find_by_tag_id(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -34,7 +35,7 @@ class ValidationsController < ApplicationController
 
   # GET /validations/1/edit
   def edit
-    @validation = Validation.find(params[:id])
+    @validation = Validation.find(params[:tag_id])
   end
 
   # POST /validations
