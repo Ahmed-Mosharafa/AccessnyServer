@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tag:</b>
+  <%= @validation.tag_id %>
+</p>
+
+<p>
+  <b>Encoded:</b>
+  <%= @validation.encoded_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_validation_path(@validation) %> |
+<%= link_to 'Back', validations_path %>
