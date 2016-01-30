@@ -13,7 +13,7 @@ class ValidationsController < ApplicationController
   # GET /validations/1
   # GET /validations/1.json
   def show
-    @validation = Validation.find(params[:id])
+    @validation = Validation.find(params[:tag_id])
 
     respond_to do |format|
       format.html # show.html.erb
