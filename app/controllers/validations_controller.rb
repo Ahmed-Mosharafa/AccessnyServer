@@ -13,8 +13,8 @@ class ValidationsController < ApplicationController
   # GET /validations/1
   # GET /validations/1.json
   def show
-    debugger
-    @validation = Validation.find_by_tag_id(params[:id])
+    #debugger
+    @validation = Validation.find_by_id(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -35,14 +35,15 @@ class ValidationsController < ApplicationController
 
   # GET /validations/1/edit
   def edit
-    @validation = Validation.find(params[:tag_id])
+    @validation = Validation.find(params[:id])
   end
 
   # POST /validations
   # POST /validations.json
   def create
-    @validation = Validation.new(params[:validation])
-
+    #@validation = Validation.new(params[:validation])
+    #debugger
+    @validation = Validation.add_tag(params[:validation])
     respond_to do |format|
       if @validation.save
         format.html { redirect_to @validation, notice: 'Validation was successfully created.' }

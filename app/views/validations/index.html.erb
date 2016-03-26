@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-    <th>Tag</th>
     <th>Encoded</th>
     <th></th>
     <th></th>
@@ -11,7 +10,6 @@
 
 <% @validations.each do |validation| %>
   <tr>
-    <td><%= validation.tag_id %></td>
     <td><%= validation.encoded_id %></td>
     <td><%= link_to 'Show', validation %></td>
     <td><%= link_to 'Edit', edit_validation_path(validation) %></td>
